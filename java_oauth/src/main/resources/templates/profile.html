@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 24px;
+            background: #f5f7fb;
+            color: #1f2937;
+        }
+        .card {
+            max-width: 760px;
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: 180px 1fr;
+            gap: 10px 14px;
+            margin-top: 12px;
+        }
+        .label {
+            color: #6b7280;
+            font-weight: 600;
+        }
+        .value {
+            word-break: break-word;
+        }
+        .actions {
+            margin-top: 18px;
+        }
+        button {
+            background: #1d4ed8;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 8px 14px;
+            cursor: pointer;
+        }
+        a {
+            color: #1d4ed8;
+        }
+    </style>
+</head>
+<body>
+<div class="card">
+    <h1>User profile</h1>
+    <div class="grid">
+        <div class="label">Username</div>
+        <div class="value" th:text="${username}">username</div>
+
+        <div class="label">Name</div>
+        <div class="value" th:text="${name}">Not provided</div>
+
+        <div class="label">Email</div>
+        <div class="value" th:text="${email}">Not provided</div>
+
+        <div class="label">Phone</div>
+        <div class="value" th:text="${phone}">Not provided</div>
+
+        <div class="label">Subject (sub)</div>
+        <div class="value" th:text="${sub}">Not provided</div>
+
+        <div class="label">Authorities</div>
+        <div class="value" th:text="${authorities}">[ROLE_USER]</div>
+    </div>
+
+    <div class="actions">
+        <a href="/">Home</a> |
+        <a href="/admin">Admin page</a>
+    </div>
+
+    <div class="actions">
+        <form method="post" action="/logout">
+            <button type="submit">Logout</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>

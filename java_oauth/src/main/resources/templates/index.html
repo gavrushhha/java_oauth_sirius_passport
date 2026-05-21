@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auth Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 24px;
+            background: #f5f7fb;
+            color: #1f2937;
+        }
+        .card {
+            max-width: 760px;
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+        }
+        .menu {
+            margin-top: 14px;
+            display: grid;
+            gap: 10px;
+        }
+        .menu a {
+            color: #1d4ed8;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .menu a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+<div class="card">
+    <h1>Authorization Test App</h1>
+    <p>This app is configured for OAuth2/OIDC login via Sirius Passport.</p>
+
+    <nav class="menu">
+        <a href="/login">Login page</a>
+        <a href="/profile">Profile (requires authentication)</a>
+        <a href="/admin">Admin page (requires authentication)</a>
+    </nav>
+</div>
+</body>
+</html>

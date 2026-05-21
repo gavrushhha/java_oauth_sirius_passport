@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 24px;
+            background: #f5f7fb;
+            color: #1f2937;
+        }
+        .card {
+            max-width: 760px;
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+        }
+        .actions {
+            margin-top: 18px;
+        }
+        a {
+            color: #1d4ed8;
+        }
+        button {
+            background: #1d4ed8;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 8px 14px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<div class="card">
+    <h1>Admin zone</h1>
+    <p>Welcome, <strong th:text="${username}">admin</strong>.</p>
+    <p>This is a protected page to test authorized access after OAuth2 login.</p>
+
+    <div class="actions">
+        <a href="/">Home</a> |
+        <a href="/profile">Profile</a>
+    </div>
+
+    <div class="actions">
+        <form method="post" action="/logout">
+            <button type="submit">Logout</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>

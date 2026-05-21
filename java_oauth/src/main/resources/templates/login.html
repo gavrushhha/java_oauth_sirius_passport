@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 24px;
+            background: #f5f7fb;
+            color: #1f2937;
+        }
+        .card {
+            max-width: 760px;
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 8px;
+            background: #1d4ed8;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 8px;
+            padding: 10px 14px;
+            font-weight: 600;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 14px;
+            color: #1d4ed8;
+        }
+    </style>
+</head>
+<body>
+<div class="card">
+    <h1>Login</h1>
+    <p>Authorization via Sirius Passport.</p>
+
+    <a class="btn" href="/oauth2/authorization/sirius">Sign in with Sirius Passport</a>
+
+    <!-- Keycloak (второй провайдер, отключено)
+    <a class="btn" href="/oauth2/authorization/keycloak">Sign in with Keycloak</a>
+    -->
+
+    <div>
+        <a class="back-link" href="/">Back to home</a>
+    </div>
+</div>
+</body>
+</html>
